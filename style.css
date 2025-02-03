@@ -110,10 +110,6 @@
                     /* Subtle hover effect */
                 }
                 
-                .main {
-                    padding: 2rem;
-                }
-                
                 .neomorphic-card {
                     background-color: var(--card-bg);
                     padding: 1.5rem;
