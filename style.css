@@ -2,9 +2,9 @@
                 
                 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
                  :root {
-                    --bg-color: #142444;
+                    --bg-color: #08101f;
                     /* Dark background */
-                    --card-bg: #282b30;
+                    --card-bg: #0e1e37;
                     /* Darker card background */
                     --text-color: #e0e0e0;
                     /* Light text color */
@@ -46,7 +46,7 @@
                     margin: 0;
                     padding: 0;
                     display: flex;
-                    margin-right: 1.5rem;
+                    margin-right: 5.5rem;
                 }
                 
                 .nav-links li {
@@ -54,6 +54,7 @@
                 }
                 
                 .nav-links a {
+                    display: none;
                     color: var(--text-color);
                     text-decoration: none;
                     padding: 0.5rem;
@@ -113,21 +114,23 @@
                 .neomorphic-card {
                     background-color: var(--card-bg);
                     padding: 1.5rem;
-                    margin: 2rem auto;
+                    margin: auto;
                     /* Center the cards */
                     border-radius: 1rem;
                     box-shadow: 5px 5px 10px var(--shadow-color), -5px -5px 10px rgba(255, 255, 255, 0.05);
                     /* Neomorphic shadow */
                     max-width: 900px;
-                    min-width: 350px;
                     /* Set a maximum width */
                     width: 90%;
                     /* Occupy most of the width on smaller screens */
-                    margin-top: 3rem;
+                    margin: auto;
+                    margin-bottom: 1rem;
+                    margin-top: 5rem;
                 }
                 
                 h2 {
                     margin-bottom: 1rem;
+                    margin-top: 3rem;
                 }
                 
                 .petty-cash-summary {
@@ -151,13 +154,19 @@
                     background-color: var(--card-bg);
                     color: white;
                     border: 1px solid white;
-                    padding: 0.75rem 1.25rem;
+                    padding: 0.5rem;
                     margin-left: 0.5rem;
                     /* Space between buttons */
                     border-radius: 0.5rem;
                     cursor: pointer;
                     transition: all 0.3s ease-in-out;
                     /* Smooth transition */
+                }
+                
+                @media (max-width: 768px) {
+                    button {
+                        font-size: 0.5rem;
+                    }
                 }
                 
                 .cash-actions button:hover,
@@ -288,7 +297,7 @@
                 
                 @media (max-width: 768px) {
                     .nav-links {
-                        display: block;
+                        display: none;
                         display: flex;
                         flex-direction: row;
                         /* Hide on smaller screens */
@@ -298,6 +307,9 @@
                         /* Show the toggle button */
                     }
                     .neomorphic-card {
-                        width: 95%;
+                        display: flex;
+                        flex-direction: column;
+                        width: 90%;
+                        margin: auto;
                     }
                 }
