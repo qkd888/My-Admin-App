@@ -10,7 +10,9 @@
 
 <body>
     <nav>
-        <div class="logo">Q</div>
+        <div class="logo">
+            < MyAdminApp />
+        </div>
         <ul class="nav-links">
             <li><a href="#reminders">Reminders</a></li>
             <li><a href="#tasks">Tasks</a></li>
@@ -37,7 +39,8 @@
                     <input type="number" id="addFundsAmount" placeholder="Enter amount" step="0.01" min="0">
                     <input type="text" id="addFundsSource" placeholder="Source (e.g., Salary, Bonus)">
                 </div>
-                <button onclick="App.addFunds()">Confirm</button>
+                <button class="afunds-btn
+                " onclick="App.addFunds()">Confirm</button>
             </div>
         </div>
 
@@ -55,7 +58,9 @@
         </div>
 
         <section id="tasks" class="neomorphic-card">
-            <h2>Tasks</h2>
+            <h2>
+                < Tasks />
+            </h2>
             <div id="task-list"></div>
             <div class="input-group">
                 <input type="text" id="new-task" placeholder="Add a task">
@@ -64,7 +69,9 @@
         </section>
 
         <section id="reminders" class="neomorphic-card">
-            <h2>Reminders</h2>
+            <h2>
+                < Reminders />
+            </h2>
             <div id="reminder-list"></div>
             <div class="input-group">
                 <input type="text" id="new-reminder" placeholder="Add a reminder">
@@ -73,7 +80,9 @@
         </section>
 
         <section id="petty-cash" class="neomorphic-card">
-            <h2>Cash</h2>
+            <h2>
+                < Cash />
+            </h2>
             <div class="petty-cash-summary">
                 <div class="cash-balance">
                     <h3>Current Balance</h3>
