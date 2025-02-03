@@ -28,69 +28,73 @@
         </div>
     </nav>
 
-    <div id="addFundsModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="App.closeModal('addFundsModal')">&times;</span>
-            <h3>Add Funds</h3>
-            <div class="input-group">
-                <input type="number" id="addFundsAmount" placeholder="Enter amount" step="0.01" min="0">
-                <input type="text" id="addFundsSource" placeholder="Source (e.g., Salary, Bonus)">
+    <div class="main">
+        <div id="addFundsModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" onclick="App.closeModal('addFundsModal')">&times;</span>
+                <h3>Add Funds</h3>
+                <div class="input-group">
+                    <input type="number" id="addFundsAmount" placeholder="Enter amount" step="0.01" min="0">
+                    <input type="text" id="addFundsSource" placeholder="Source (e.g., Salary, Bonus)">
+                </div>
+                <button onclick="App.addFunds()">Confirm</button>
             </div>
-            <button onclick="App.addFunds()">Confirm</button>
         </div>
+
+        <div id="expenseModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" onclick="App.closeModal('expenseModal')">&times;</span>
+                <h3>Log Expense</h3>
+                <div class="input-group">
+                    <input type="number" id="expenseAmount" placeholder="Enter amount" step="0.01" min="0">
+                    <input type="text" id="expenseCategory" placeholder="Category (e.g., Groceries, Transport)">
+                    <textarea id="expenseDescription" placeholder="Description (optional)"></textarea>
+                </div>
+                <button onclick="App.logExpense()">Confirm</button>
+            </div>
+        </div>
+
+        <section id="tasks" class="neomorphic-card">
+            <h2>Tasks</h2>
+            <div id="task-list"></div>
+            <div class="input-group">
+                <input type="text" id="new-task" placeholder="Add a task">
+                <button onclick="App.addTask()">Add</button>
+            </div>
+        </section>
+
+        <section id="reminders" class="neomorphic-card">
+            <h2>Reminders</h2>
+            <div id="reminder-list"></div>
+            <div class="input-group">
+                <input type="text" id="new-reminder" placeholder="Add a reminder">
+                <button onclick="App.addReminder()">Add</button>
+            </div>
+        </section>
+
+        <section id="petty-cash" class="neomorphic-card">
+            <h2>Cash</h2>
+            <div class="petty-cash-summary">
+                <div class="cash-balance">
+                    <h3>Current Balance</h3>
+                    <p id="totalCashBalance">R0.00</p>
+                </div>
+                <div class="cash-actions">
+                    <button onclick="App.openAddFundsModal()">Add Funds</button>
+                    <button onclick="App.openExpenseModal()">Log Expense</button>
+                    <button onclick="App.clearPettyCashData()">Clear Data</button> </div>
+            </div>
+            <div id="cashTransactionList" class="transaction-list"></div>
+        </section>
+
+        <footer>
+            <p><a href="" class="githublink">&copy; QKDEV 2025</a></p>
+        </footer>
+
+        <script src="script.js"></script>
     </div>
 
-    <div id="expenseModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="App.closeModal('expenseModal')">&times;</span>
-            <h3>Log Expense</h3>
-            <div class="input-group">
-                <input type="number" id="expenseAmount" placeholder="Enter amount" step="0.01" min="0">
-                <input type="text" id="expenseCategory" placeholder="Category (e.g., Groceries, Transport)">
-                <textarea id="expenseDescription" placeholder="Description (optional)"></textarea>
-            </div>
-            <button onclick="App.logExpense()">Confirm</button>
-        </div>
-    </div>
 
-    <section id="tasks" class="neomorphic-card">
-        <h2>Tasks</h2>
-        <div id="task-list"></div>
-        <div class="input-group">
-            <input type="text" id="new-task" placeholder="Add a task">
-            <button onclick="App.addTask()">Add</button>
-        </div>
-    </section>
-
-    <section id="reminders" class="neomorphic-card">
-        <h2>Reminders</h2>
-        <div id="reminder-list"></div>
-        <div class="input-group">
-            <input type="text" id="new-reminder" placeholder="Add a reminder">
-            <button onclick="App.addReminder()">Add</button>
-        </div>
-    </section>
-
-    <section id="petty-cash" class="neomorphic-card">
-        <h2>Cash</h2>
-        <div class="petty-cash-summary">
-            <div class="cash-balance">
-                <h3>Current Balance</h3>
-                <p id="totalCashBalance">R0.00</p>
-            </div>
-            <div class="cash-actions">
-                <button onclick="App.openAddFundsModal()">Add Funds</button>
-                <button onclick="App.openExpenseModal()">Log Expense</button>
-                <button onclick="App.clearPettyCashData()">Clear Data</button> </div>
-        </div>
-        <div id="cashTransactionList" class="transaction-list"></div>
-    </section>
-
-    <footer>
-        <p><a href="" class="githublink">&copy; QKDEV 2025</a></p>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 
 </html>
